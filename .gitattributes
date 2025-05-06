@@ -1,0 +1,12 @@
+﻿# Normalisation des fins de ligne
+* text=auto
+
+# Forcer les scripts à utiliser LF (utile pour bash, sh, etc.)
+*.sh text eol=lf
+
+# Eviter les changements inutiles de permissions
+*.php diff
+*.js diff
+*.css diff
+*.html diff
+*.blade.php diff
