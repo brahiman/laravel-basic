@@ -1,12 +1,30 @@
-﻿# Normalisation des fins de ligne
+﻿# ⚙️ Normalisation des fins de ligne pour tous les fichiers texte
 * text=auto
 
-# Forcer les scripts à utiliser LF (utile pour bash, sh, etc.)
+# 🐧 Forcer LF pour les scripts shell (important si usage Linux/WSL plus tard)
 *.sh text eol=lf
 
-# Eviter les changements inutiles de permissions
-*.php diff
-*.js diff
-*.css diff
-*.html diff
-*.blade.php diff
+# ✨ Laravel / Web standard : définir les types de fichiers principaux
+*.php     text eol=lf diff
+*.js      text eol=lf diff
+*.css     text eol=lf diff
+*.html    text eol=lf diff
+*.blade.php text eol=lf diff
+*.json    text eol=lf
+*.yml     text eol=lf
+*.md      text eol=lf
+
+# 🎨 Eviter les changements inutiles de permissions sur les fichiers binaires
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.eot binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# 📦 Composer / NPM lock files (pas d'altération des fins de ligne)
+composer.lock -text
+package-lock.json -text
